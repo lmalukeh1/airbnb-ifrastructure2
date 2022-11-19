@@ -1,14 +1,14 @@
-resource "aws_instance" "web"{
+resource "aws_instance" "webs"{
   ami           = var.AMI_ID  
   instance_type = var.INSTANCE_TYPE
   monitoring = true
   ebs_optimized = true
   
   root_block_device {
-  encryted       =true
+  encrypted       =true
   }
   
    tags = {
-     Name = "airbnb-web-server"
+     Name = "airbnb-web-server_instance"
    }
 }
